@@ -1,0 +1,186 @@
+form{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  #heading{
+    
+    font-size:100px; 
+    font-family: MrsBeasleyRegular ; 
+    color: yellow ;
+    text-shadow:
+    -1px -1px 0 blue,
+    1px -1px 0 blue,
+    -1px 1px 0 blue,
+    1px 1px 0 blue;
+  }  
+#selectimageuploadtext{
+  margin-top:20px ;
+  font-size:30px ; 
+  color: rgb(0, 0, 0); 
+  color: white;
+    text-shadow:
+    -1px -1px 0 blue,
+    1px -1px 0 blue,
+    -1px 1px 0 blue,
+    1px 1px 0 blue;
+  font-family: LemonRegular ; 
+}
+
+#resultimg{
+  margin: 50px ;
+  height : 300px ;
+  width: auto ;
+}
+
+.capture_image{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}  
+  .input{
+    width: 315px;
+  }
+  #skintone{
+    background-image: url(images/skintone.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 100px ;
+  }
+
+  #snapback{
+    background-image: url(images/pic3.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 100px ;
+  }
+  #snapback .capture_image{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}  
+.mydivision{ background-color: blue; height: 200px ; width: 200px;}
+
+  #snap{
+    margin-top: 10px ;
+  }
+
+
+.imagesuccess{
+color:rgb(0, 200, 0) ; 
+font-family:SuperiaRegular ; 
+margin-top : 15px ;
+margin-bottom : 20px ;
+width: 600px;
+background-color: rgba(0, 0, 0, 0.5);
+border: solid blue ;
+padding: 5px;
+font-size: 30px ;
+font-weight: bold;
+}
+
+.imageskintone{
+  color:rgb(0, 175, 161 ) ; 
+  width: 300px ;
+  background-color: black ;
+  padding: 5px ;
+  border: solid limegreen;
+  font-family:AveriaSansGWFRegular ; 
+  margin : 15px 10% 15px 10% ;
+  font-size: 30px ;
+  font-weight: bold;
+}
+
+#captureimagebtn{
+  margin: 20px ;
+}
+
+#snap123{
+  color:rgb(0, 175, 161) ; 
+  width: 300px ;
+  background-color: black;
+  padding: 5px ;
+  border: solid limegreen;
+font-family:AveriaSansGWFRegular ; 
+margin : 15px 10% 15px 10% ;
+font-size: 30px ;
+font-weight: bold;
+}
+
+  @media screen and (max-width: 1200px) {
+
+    .input{
+      width: 250px;
+    }
+    #skintone,#snapback{
+      padding: 50px ;
+    }
+    #heading{
+      font-size: 75px;
+      padding-top: 5px;
+    }
+
+    #resultimg{
+      height : 200px ;
+      margin: 0px ;
+     
+    }    
+  }
+  @media screen and (max-width: 700px) {
+   
+    .input {
+      width: 100%;
+    }
+
+    .imagesuccess{
+      width: 100%;    
+      font-size: 15px ;
+  
+      }
+
+    .imageskintone , #snap123{
+      width: 170px ;
+      font-size: 18px ;
+    }
+    
+
+    #resultimg{
+      height : 100px ;
+      margin : 0px ;
+    }
+
+    input[type="file"] {
+       /* z-index: -1; */
+      width: 100% ;
+      font-size: 9px;
+      margin-bottom: 15px;
+      color: #b8b8b8;
+    }
+    
+
+    #input2,#fileToUpload{
+      height: 30px;
+    }
+  
+    #captureimagebtn{
+      margin: 0 ;
+    }
+    #selectimageuploadtext{
+      margin-top:10px ;
+      font-size:15px ; 
+      
+    }
+    #skintone,#snapback{
+      padding: 0px 30px 30px 30px ;
+    }
+    #heading{
+      padding-top: 5px;
+      font-size: 40px;
+    }
+
+    .formclass form{
+      margin-left: 0;
+      margin-right: 0;
+    }
+  
+  }
+  
+  

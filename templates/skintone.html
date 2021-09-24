@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div align="center" id="skintone">
+    <center >
+        <p id="heading">HumanSkinTone</p>
+    </center>
+    <div class="fluid-container" >
+        <section >
+        {% if obj %}
+        <h2 class="imagesuccess" >{{ obj.caption}} Your ImageSuccesfully uploaded  </h2>
+        <img src="{{ obj.image.url}}" alt="image" class="img-thumbnail" id="resultimg" >
+        {% endif %}
+        <hr> 
+        {% if skinto %}
+        <h1 class="imageskintone">Skintone : {{ skinto }}</h1>
+        {% endif %}
+        </section>
+        <section align="center" style="margin : 25px ;">
+            <div class="capture_image">
+                <section align="center"  id="captureimagebtn">
+                    <a href="capture.html" ><button class="btn btn-primary btn-sm" style="background-color:black ; color:white">
+                      Capture
+                    </button></a>
+                  </section>
+                  <!-- <div class="mydivision"></div> -->
+                <p id="selectimageuploadtext">Select image to upload:</p>
+                <form action="SaveImage" method="POST" enctype="multipart/form-data"  >
+                    {% csrf_token %}
+
+                    <!-- {{ forms.as_p }} -->
+                    <center>
+                    <div class="input form-group " >
+                        <input type="text" name="caption" placeholder="Your Name" id="input2"  class=" form-control" required >
+                    </div>
+                    <div class="input form-group">
+                    <input type="file" name="image" id="fileToUpload" style="background-color:white" class=" form-control">
+                    </div>
+                    </center>
+                    
+                    <input class="btn btn-primary " type="submit" value="Upload Image" >            
+                    
+                    
+                </form>
+                
+            </div>
+             
+        </section>
+
+        
+
+    </div>
+</div>    
+
+{% endblock %}    

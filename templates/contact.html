@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container1">
+    <div style="text-align:center">
+      <h2>Contact Us</h2>
+      <h3>Leave us a message:</h3>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="{% static 'img/pic4.png' %}" style="width:100%"  >
+        
+      </div>
+      <div class="column">
+        {% if yourname %}
+          <center>    
+          <div style="color: rgb(255, 0, 0);">
+                      <i><h5 class="text-center" style="margin-bottom: 20px;">{{yourname}} your request is taken under consideration</h5><i>
+                      <i><p><b>Thank You!</b></p><i>
+          </div>
+          </center>
+        {% endif %}
+        
+        <form action="help" method="POST">
+          {% csrf_token %}
+          <label for="fname"><b>Name :</b></label>
+          <input type="text"  name="name" placeholder="Your name.." class="form-control" id="fname">
+          <label for="lname"><b>Question :</b></label>
+          <input type="text"  name="question" placeholder="Your Question" class="form-control" id="lname">
+          <label for="typemail"><b>Your Email :</b></label>
+          <input type="email"  name="email" placeholder="Email" class="form-control" id="typemail">
+          <label for="subject"><b>Subject :</b></label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+          <button class="btn btn-success btn-lg" type="submit" style="margin-top: 10px;">Submit</button>
+        </form>
+      </div>
+    </div>
+ </div>
+
+ {% endblock %}

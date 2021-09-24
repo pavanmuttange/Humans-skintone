@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div align="center" id="snapback">
+            
+        <center >
+            <h1 id="heading" >HumanSkinTone</h1>
+        </center>
+        <div class="fluid-container" >
+            
+            <section>
+            {% if snapdata %}<h1 id="snap123" >Skintone : {{snapdata}}</h1>{%  endif %}<br/>
+            </section>
+            <section align="center" style="margin:30px">
+                <div class="capture_image">
+                    <section align="center" id="captureimagebtn">
+                        <a href="skintone.html" ><button class="btn btn-primary btn-bg" style="background-color:black ; color:white">
+                          Upload
+                        </button></a>
+                      </section>
+                    <p id="selectimageuploadtext" >Capture Snap</p>
+                    <center>
+                    <div align="center" id="camera" ></div>
+                    </center>
+                    <div class="formclass">
+                        <form action="capturedimage" method="POST" enctype="multipart/form-data"  >
+                            
+                            {% csrf_token %}
+
+                            <center>
+                            
+                            <!-- <script src="{% static 'js/camera.js' %}"></script> -->
+                            
+                            <!--FOR THE SNAPSHOT-->
+                            <input class="btn btn-primary" type="button" value="Take a Snap" id="btPic" onclick="takeSnapShot()" /> 
+                            <p id="snap"></p><br/>
+                            <input type="hidden" name="captureimagedata"  id="snapShot" />
+                
+                            <input class="btn btn-primary" type="submit" value="Find Skintone" name="submit">
+
+                            </center>
+                            {% if captureinvalid %}
+                            <center>    
+                            <div style="color: rgb(255, 0, 0);">
+                                        <h4 class="text-center" style="margin-bottom: 20px;">Take a snap first.</h4>
+                            </div>
+                            </center>
+                            {% endif %}
+                        </form>
+                    </div>    
+                    
+                </div>    
+            </section>
+        </div>
+    
+</div>  
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.js"></script>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- <div class="container"> -->
+<section align="center" style="margin-top: 50px ;">
+  <div class="home_image">
+    <img src="{% static 'img/pic1.jpeg' %}" alt="image not found" id="home_img">
+    <img src="{% static 'img/pic3.jpg' %}" alt="image not found" class="home_img2" >
+  </div>
+      
+</section>
+
+<section align="center" style="margin: 50px ;">
+  <a href="skintone.html" ><button class="btn btn-primary btn-lg">
+    Find SkinTone
+  </button></a>
+</section>
+
+<section align="center" style="margin: 50px ;">
+  <h3>
+    <p>What is Skintone</p>
+    <p>
+      Human skin color detection, for the most part, is used for human face detection. It is one of the best approaches for finding and extracting a person’s face in a given picture. Often it is understood that, for individuals of different races, the fragments skin tones change for some degree. To feature the color of human skin, use different color spaces are accessible.
+    </p>
+    <p>
+      The three primary spaces for recognizing a skin are RGB (Red, Green, Blue), YCbCr (Luminance, Chrominance) and HSV (Hue, Saturation, Value) color models.
+    </p>
+    <p>
+      A color model is a term that denotes an abstract model for describing the representation of colors as tuples of numbers, usually of three or four values, called color components or color coordinates. Together with the method of interpreting this data, the many colors of the color model determine the color space.
+    </p>
+  </h3>
+</section>
+
+
+
+{% endblock %}    
